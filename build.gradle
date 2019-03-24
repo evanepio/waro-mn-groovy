@@ -55,10 +55,7 @@ test.classpath += configurations.developmentOnly
 run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1')
 
 mainClassName = "ca.evanepio.Application"
-// use JUnit 5 platform
-test {
-    useJUnitPlatform()
-}
+
 tasks.withType(GroovyCompile) {
     groovyOptions.forkOptions.jvmArgs.add('-Dgroovy.parameters=true')
 }
